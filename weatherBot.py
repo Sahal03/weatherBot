@@ -1,16 +1,16 @@
-import discord
+import discord, time
+from discord.ext import commands
 
-# Create discord client
-bot = discord.Client()
+# Create discord bot and set command prefix
+bot = commands.Bot(command_prefix='!')
 
-@bot.event
-async def on_ready():
-#...
+@bot.command(name='weather')
+async def weather(context):
+    myEmbed = discord.Embed(title="Weather",description="Bot Version 1.0")
+    
+    await context.message.channel.send(embed=myEmbed)
 
-    gen = bot.get_channel(804427366859276340)
-
-    await gen.send("How about this weather?")
 # Run bot
-bot.run("OTIzNDk1NTk5MTE3MDc0NTAy.YcQ2TA.2GjGyKaaRfV4notmRcnpZeJI3Bs")
+bot.run("OTIzNDk1NTk5MTE3MDc0NTAy.YcQ2TA.I3cdJpL6U0hlgK0dFcIIeN3lgmQ")
 
 
