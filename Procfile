@@ -1,1 +1,2 @@
-worker: python3.9.9 weatherBot.py
+worker: python weatherBot.py
+web: python weatherBot.py
