@@ -1,1 +1,0 @@
-worker: python3.9.9 app.py
