@@ -74,27 +74,33 @@ async def weather(ctx, arg):
     #weather description
     x = y + "°" + " with " + z 
 
-    
+    #embedded message with all the information gathered
     myEmbed = discord.Embed(title="Weather in " + city.upper(),description=x)
     myEmbed.set_author(name="Weather Bot")
     myEmbed.set_thumbnail(url=emoji)
     myEmbed.add_field(name='Humidity',value=humidity,inline=True)
     myEmbed.add_field(name='Feels Like',value=feel,inline=True)
 
+    #send to the channel
     await ctx.message.channel.send(embed=myEmbed)
 
 
+#instructions on how to properly use the bot
 @bot.command(name='help')
 async def help(ctx):
     x = "!weather [CITY][COUNTRY ABREVIATION]"
     y = "!weather [CITY]"
+    z = '!weather "[CITY][COUNTRY ABREVIATION]"'
+    a = '!weather "[CITY]"'
     myEmbed = discord.Embed(title="Weather Bot",description=x)
     myEmbed.add_field(name="or",value=y,inline=True)
+    myEmbed.add_field(name="or",value=z,inline=False)
+    myEmbed.add_field(name="or",value=a,inline=False)
     
     await ctx.message.channel.send(embed=myEmbed)
 
 
-#
+#error message
 @weather.error
 async def error(ctx,error):
      await ctx.message.channel.send('Try the "!help" command')
