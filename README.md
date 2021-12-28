@@ -7,7 +7,7 @@
 
 
 
-!weather [CITY][COUNTRY ABREVIATION]
+!weather [CITY],[COUNTRY ABREVIATION]
 
 
 
@@ -15,7 +15,7 @@
 
 
 
-!weather "[CITY][COUNTRY ABREVIATION]"
+!weather "[CITY],[COUNTRY ABREVIATION]"
 
 
 
