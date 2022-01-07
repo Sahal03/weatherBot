@@ -88,9 +88,9 @@ async def weather(ctx, arg):
 #instructions on how to properly use the bot
 @bot.command(name='help')
 async def help(ctx):
-    x = "!weather [CITY][COUNTRY ABREVIATION]"
+    x = "!weather [CITY],[COUNTRY ABREVIATION]"
     y = "!weather [CITY]"
-    z = '!weather "[CITY][COUNTRY ABREVIATION]"'
+    z = '!weather "[CITY],[COUNTRY ABREVIATION]"'
     a = '!weather "[CITY]"'
     myEmbed = discord.Embed(title="Weather Bot",description=x)
     myEmbed.add_field(name="or",value=y,inline=True)
